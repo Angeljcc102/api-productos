@@ -21,6 +21,8 @@ Version 1.0 de la api-productos
   - Producto : nombre:string not null , descripcion:string not null , categoria_id not null
 
  ## Rutas
+ 
+ La pagina es la siguiente : https://api-productos.herokuapp.com
 
  ## Rutas de Categoria
 
@@ -49,3 +51,5 @@ Version 1.0 de la api-productos
   ## Notas
 
   Errores no manejados como parsing del json o utilizar metodos de petición no soportados en una dirección
+  
+  En la rama Heroku se encuentra la versión implementada en postgreSQL que funciona igual.
