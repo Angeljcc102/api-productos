@@ -1,25 +1,53 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Version 1.0 de la api-productos
 
-Things you may want to cover:
+- Ruby version
+  # 2.7.4p191
+- Rails version
 
-* Ruby version
+  # Rails 6.1.4.1
 
-* System dependencies
+- Configuracion
 
-* Configuration
+  # Ejecutar el comando bundle para instalar las gemas utilizadas
 
-* Database creation
+  # Iniciar servicio con rails s
 
-* Database initialization
+- Tablas de base de datos
 
-* How to run the test suite
+  # Categoria : nombre:string not null , descripcion:string not null
 
-* Services (job queues, cache servers, search engines, etc.)
+  # Producto : nombre:string not null , descripcion:string not null , categoria_id not null
 
-* Deployment instructions
+  - Rutas
 
-* ...
+  - Rutas de Categoria
+
+  # GET /categoria : Regresa todas las categorias
+
+  # POST /categoria : Crear una nueva categoria
+
+  # GET /categoria/id : Regresa categoria con el id
+
+  # PUT /categoria/id : Actualizar una categoria
+
+  # DELETE /categoria/id : Eliminar una categoria, solo si no tiene productos
+
+  - Rutas de Producto
+
+  # GET /productos : Regresa todos los productos
+
+  # POST /productos : Crear un nuevo producto
+
+  # GET /productos/id : Regresa un producto
+
+  # PUT /productos/id : Actualizar un producto
+
+  # DELETE /productos/id : Eliminar un producto
+
+  - Notas
+
+  Errores no manejados como parsing del json o utilizar metodos de petición no soportados en una dirección
+
 # api-productos
