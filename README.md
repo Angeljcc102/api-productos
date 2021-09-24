@@ -2,52 +2,50 @@
 
 Version 1.0 de la api-productos
 
-- Ruby version
-  # 2.7.4p191
-- Rails version
+## Ruby version
+  - 2.7.4p191
+ ## Rails version
 
-  # Rails 6.1.4.1
+  - Rails 6.1.4.1
 
-- Configuracion
+ ## Configuracion
 
-  # Ejecutar el comando bundle para instalar las gemas utilizadas
+  - Ejecutar el comando bundle para instalar las gemas utilizadas
 
-  # Iniciar servicio con rails s
+  - Iniciar servicio con rails s
 
-- Tablas de base de datos
+ ## Tablas de base de datos
 
-  # Categoria : nombre:string not null , descripcion:string not null
+  - Categoria : nombre:string not null , descripcion:string not null
 
-  # Producto : nombre:string not null , descripcion:string not null , categoria_id not null
+  - Producto : nombre:string not null , descripcion:string not null , categoria_id not null
 
-  - Rutas
+ ## Rutas
 
-  - Rutas de Categoria
+ ## Rutas de Categoria
 
-  # GET /categoria : Regresa todas las categorias
+  - GET /categoria : Regresa todas las categorias
 
-  # POST /categoria : Crear una nueva categoria
+  - POST /categoria : Crear una nueva categoria
 
-  # GET /categoria/id : Regresa categoria con el id
+  - GET /categoria/id : Regresa categoria con el id
 
-  # PUT /categoria/id : Actualizar una categoria
+  - PUT /categoria/id : Actualizar una categoria
 
-  # DELETE /categoria/id : Eliminar una categoria, solo si no tiene productos
+  - DELETE /categoria/id : Eliminar una categoria, solo si no tiene productos
 
-  - Rutas de Producto
+  ## Rutas de Producto
 
-  # GET /productos : Regresa todos los productos
+  - GET /productos : Regresa todos los productos
 
-  # POST /productos : Crear un nuevo producto
+  - POST /productos : Crear un nuevo producto
 
-  # GET /productos/id : Regresa un producto
+  - GET /productos/id : Regresa un producto
 
-  # PUT /productos/id : Actualizar un producto
+  - PUT /productos/id : Actualizar un producto
 
-  # DELETE /productos/id : Eliminar un producto
+  - DELETE /productos/id : Eliminar un producto
 
-  - Notas
+  ## Notas
 
   Errores no manejados como parsing del json o utilizar metodos de petición no soportados en una dirección
-
-# api-productos
