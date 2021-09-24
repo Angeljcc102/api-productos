@@ -18,12 +18,16 @@ class ProductosController < ApplicationController
 
   # POST /productos
   def create
-    @producto = Producto.new(producto_params)
-
-    if @producto.save
-      render json: @producto, status: :created, location: @producto
+    if params[:nombre] == "" || params[:descripcion] == ""
+      render json: { message: "No se puede agregar un atributo del producto vacio" }
     else
-      render json: @producto.errors, status: :unprocessable_entity
+      @producto = Producto.new(producto_params)
+
+      if @producto.save
+        render json: @producto, status: :created, location: @producto
+      else
+        render json: @producto.errors, status: :unprocessable_entity
+      end
     end
   end
 
