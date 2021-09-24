@@ -1,5 +1,8 @@
 class ProductosController < ApplicationController
   before_action :set_producto, only: [:show, :update, :destroy]
+  rescue_from ActiveRecord::RecordNotFound, with: :handle_record_not_found
+  rescue_from ActiveRecord::NotNullViolation, with: :handle_not_null
+  rescue_from ActionController::ParameterMissing, with: :handle_parameter_missing
 
   # GET /productos
   def index
@@ -36,6 +39,7 @@ class ProductosController < ApplicationController
   # DELETE /productos/1
   def destroy
     @producto.destroy
+
   end
 
   private
@@ -48,4 +52,17 @@ class ProductosController < ApplicationController
     def producto_params
       params.require(:producto).permit(:nombre, :descripcion, :categoria_id)
     end
+
+    def handle_record_not_found
+      render json: {message: "id no valido"}
+    end
+
+    def handle_not_null
+      render json: {message: "No se pueden agregar productos si falta alguna caracteristica"}
+    end
+
+    def handle_parameter_missing
+      render json: {message: "Parametro de producto no valido"}
+    end
+
 end
